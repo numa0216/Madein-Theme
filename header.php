@@ -9,6 +9,9 @@
 <body>
     <header>
         <h1 class="title">タイトル</h1>
+        <a href="https://madein.works">
+            <img src="http://localhost/wordpress/wp-content/uploads/2023/06/logo.svg" alt="logo">
+        </a>
         <div class="mainMenu">
             <button type="button" id="menuBtn" class="close">
                 <i class="fa fa-bars" aria-hidden="true"></i>

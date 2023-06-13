@@ -9,7 +9,7 @@ const button = document.getElementById("menuBtn");
 button.addEventListener("click", (e) => {
   if (e.target.classList.contains("close")) {
     gsap.to("#menuBtnJs", {
-      x: -200, //←コンマを忘れないように
+      x: 100, //←コンマを忘れないように
     });
     e.target.classList.remove("close");
   } else {
