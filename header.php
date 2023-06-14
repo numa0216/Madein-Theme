@@ -4,6 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <?php wp_head(); ?>
 </head>
 
@@ -11,7 +12,7 @@
     <header>
         <h1 class="title">MADEIN</h1>
         <a href="https://madein.works">
-            <img src="../../../wp-content/uploads/2023/06/logo.svg" alt="logo">
+            <img src="<?php echo get_template_directory_uri() . '/assets/img/logo-white.svg'; ?>" alt="logo">
         </a>
         <div id="modalMenu" class="mainMenu">
             <button type="button" class="btn" @click="show = !show">

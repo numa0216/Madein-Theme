@@ -5,11 +5,11 @@ const modal = new Vue({
   },
 });
 
-jQuery(function () {
+$(function () {
   const webStorage = function () {
     if (sessionStorage.getItem("access")) {
       //2回目以降アクセス時の処理
-      jQuery("#welcome").hide();
+      $("#welcome").hide();
     } else {
       //初回アクセス時の処理
       sessionStorage.setItem("access", 0);
