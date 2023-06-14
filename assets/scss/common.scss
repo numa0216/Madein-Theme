@@ -1,46 +1,233 @@
 @import url(sanitize.css);
 
+html {
+    font-size: 62.5%;
+}
+
 li {
-  list-style: none;
+    list-style: none;
 }
 
 body {
-  position: relative;
-  color: #ffffff;
-  background: url(../../../../../wp-content/uploads/2023/06/background-madein.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100dvh;
+    position: relative;
+    min-height: 100dvh;
+    padding-top: 8rem;
+    background: url(../../../../../wp-content/uploads/2023/06/background-madein.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
 }
 
 // header
 
 header {
-  height: 80px;
-  background-color: #ffffff1f;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  .title {
-    display: none;
-  }
-  img {
-    margin-left: 50px;
-    padding: 10px 0 10px 0;
-    max-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100dvw;
     width: 100%;
-  }
-  .mainMenu {
-    button {
-      position: relative;
+    height: 8rem;
+    background-color: rgb(0 0 0 / 90%);
+    .title {
+        display: none;
     }
-    &__block {
-      position: fixed;
-      top: 0;
-      left: 100%;
-      width: 100%;
-      height: 100dvh;
-      background-color: #000000;
+    a {
+        margin-left: 10%;
+        img {
+            width: 100%;
+            max-height: 5rem;
+            padding: 1rem 0 1rem 0;
+        }
     }
-  }
+    .mainMenu {
+        margin-right: 5%;
+        button {
+            border: 0;
+            border-radius: 0;
+            background: transparent;
+            text-align: inherit;
+            vertical-align: middle;
+            outline: 0;
+
+            -webkit-appearance: none;
+                    appearance: none;
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        /**************** 以下、ハンバーガーボタンのスタイリング ****************/
+        .btn {
+            /* バーガーの線をボタン範囲の中心に配置 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* ボタンの大きさ  */
+            width: 58px;
+            height: 48px;
+            /***** 真ん中のバーガー線 *****/
+            .btn-line {
+                /* バーガー線の位置基準として設定 */
+                position: relative;
+                /* 線の長さと高さ */
+                width: 100%;
+                height: .4rem;
+                /* バーガー線の色 */
+                background-color: #ffffff;
+                transition: .2s;
+                /***** 上下のバーガー線 *****/
+                &::before, &::after {
+                    content: "";
+                    /* 基準線と同じ大きさと色 */
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #ffffff;
+                    transition: .2s;
+                }
+
+                &::before {
+                    /* 上の線の位置 */
+                    transform: translateY(-16px);
+                }
+
+                &::after {
+                    /* 下の線の位置 */
+                    transform: translateY(16px);
+                }
+                &.open {
+                    /***** メニューオープン時 *****/
+                    /* 真ん中の線を透明に */
+                    background-color: transparent;
+
+                    &::before, &::after {
+                        content: "";
+                        transition: .2s;
+                    }
+
+                    &::before {
+                        /* 上の線を傾ける */
+                        transform: rotate(45deg);
+                    }
+
+                    &::after {
+                        /* 上の線を傾ける */
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+        /**************** ここまで、ハンバーガーボタンのスタイリング ****************/
+        &__block {
+            position: fixed;
+            top: 7.9rem;
+            left: 0;
+            width: 100%;
+            height: 100dvh;
+            background-color: rgb(0 0 0 / 90%);
+
+            &.modal-enter-active, &.modal-leave-active {
+                transform: translate(0rem, 0rem);
+                transition: transform 225ms cubic-bezier(0, 0, .2, 1) 0ms;
+            }
+
+            &.modal-enter, &.modal-leave-to {
+                transform: translateX(100vw) translateX(0rem);
+            }
+            li {
+                width: 70%;
+                margin-bottom: 1.5rem;
+                overflow: hidden;
+                white-space: nowrap;
+                a {
+                    margin-right: 1rem;
+                    color: #ffffff;
+                    font-size: 2.5rem;
+                    text-decoration: none;
+                }
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    width: 100%;
+                    border: .1rem solid #ffffff;
+                }
+            }
+        }
+    }
+}
+
+.welcome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100vw;
+    width: 100dvw;
+    height: 100vh;
+    height: 100dvh;
+    background: #000000;
+    img {
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.main {
+    height: calc(100vh - 8rem);
+    .works {
+        height: 50%;
+        .random {
+            position: relative;
+            height: 100%;
+            .bubble {
+                display: block;
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+                background-color: #ffffff;
+                font-size: 5rem;
+            }
+        }
+    }
+    .company {
+        height: 50%;
+        a {
+            display: block;
+            width: 70%;
+            margin: 0 auto;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .yaji {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 7rem;
+        height: 7rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* for PC */
 }

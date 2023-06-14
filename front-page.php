@@ -1,9 +1,34 @@
 <?php get_header(); ?>
-<?php if (have_posts()) :
-    while (have_posts()) :
-        the_post();
-        the_content();
-    endwhile;
-endif; ?>
+
+<div id="welcome" class="welcome">
+    <a href="https://madein.works">
+        <img id="mainLogo" src="../../../wp-content/uploads/2023/06/logo.svg" alt="メインロゴ">
+    </a>
+</div>
+<main class="main">
+    <div class="works">
+        <a href="/works">
+            <div class="random">
+                <span class="bubble"></span>
+                <span class="bubble"></span>
+                <span class="bubble"></span>
+                <span class="bubble"></span>
+                <span class="bubble"></span>
+                <span class="bubble"></span>
+                <span class="bubble"></span>
+                <span class="bubble"></span>
+                <span class="bubble"></span>
+                <span class="bubble"></span>
+                <span class="bubble"></span>
+            </div>
+        </a>
+    </div>
+    <div class="company">
+        <a href="/company"><img src="https://madein.works/wp-content/uploads/2023/06/家の無料アイコン.svg" alt=""></a>
+    </div>
+    <div class="yaji">
+        <img src="https://madein.works/wp-content/uploads/2023/06/矢印アイコン　下6.svg" alt="">
+    </div>
+</main>
 
 <?php get_footer(); ?>
