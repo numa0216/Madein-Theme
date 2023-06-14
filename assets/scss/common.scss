@@ -10,8 +10,9 @@ li {
 
 body {
     position: relative;
-    min-height: 100dvh;
-    padding-top: 8rem;
+    height: 100vh;
+    height: 100dvh;
+    padding: 8rem 0 5rem;
     background: url(../../../../../wp-content/uploads/2023/06/background-madein.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -131,6 +132,7 @@ header {
             top: 7.9rem;
             left: 0;
             width: 100%;
+            height: 100vh;
             height: 100dvh;
             background-color: rgb(0 0 0 / 90%);
 
@@ -185,9 +187,11 @@ header {
 }
 
 .main {
-    height: calc(100vh - 8rem);
+    height: calc(100vh - 13rem);
+    height: calc(100dvh - 13rem);
     .works {
-        height: 50%;
+        height: calc((100vh - 13rem) / 2);
+        height: calc((100dvh - 13rem) / 2);
         .random {
             position: relative;
             height: 100%;
@@ -207,7 +211,8 @@ header {
         }
     }
     .company {
-        height: 50%;
+        height: calc((100vh - 13rem) / 2);
+        height: calc((100dvh - 13rem) / 2);
         a {
             display: block;
             width: 70%;
@@ -225,6 +230,27 @@ header {
         transform: translate(-50%, -50%);
         width: 7rem;
         height: 7rem;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    width: 100svw;
+    height: 5rem;
+    padding: 0 10% 0;
+    background-color: rgb(0 0 0 / 90%);
+    .icon {
+        width: calc(100% / 5);
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 
