@@ -29,3 +29,4 @@
             </transition>
         </div>
     </header>
+    <?php echo get_breadcrumb(); ?>
