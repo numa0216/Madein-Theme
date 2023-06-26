@@ -15,8 +15,8 @@ li {
 
 body {
   position: relative;
-  height: 100vh;
-  height: 100dvh;
+  min-height: 100vh;
+  height: 100%;
   padding: 8rem 0 5rem;
   background: url(../../../../../wp-content/uploads/2023/06/background-madein.jpg);
   background-size: cover;
@@ -51,7 +51,7 @@ header a {
 }
 header a img {
   width: 100%;
-  max-height: 5rem;
+  max-height: 4rem;
   padding: 1rem 0 1rem 0;
 }
 header .mainMenu {
@@ -90,8 +90,8 @@ header .mainMenu .btn {
       -ms-flex-align: center;
           align-items: center;
   /* ボタンの大きさ  */
-  width: 58px;
-  height: 48px;
+  width: 4rem;
+  height: 4rem;
   /***** 真ん中のバーガー線 *****/
 }
 header .mainMenu .btn .btn-line {
@@ -118,13 +118,13 @@ header .mainMenu .btn .btn-line::before, header .mainMenu .btn .btn-line::after 
 }
 header .mainMenu .btn .btn-line::before {
   /* 上の線の位置 */
-  -webkit-transform: translateY(-16px);
-          transform: translateY(-16px);
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 header .mainMenu .btn .btn-line::after {
   /* 下の線の位置 */
-  -webkit-transform: translateY(16px);
-          transform: translateY(16px);
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
 }
 header .mainMenu .btn .btn-line.open {
   /***** メニューオープン時 *****/
@@ -208,16 +208,19 @@ header .mainMenu__block li::after {
 }
 
 .main {
-  height: calc(100vh - 13rem);
-  height: calc(100dvh - 13rem);
+  min-height: calc(100vh - 21rem);
+  min-height: calc(100dvh - 21rem);
+  padding: 4rem 0;
 }
-.main .works {
-  height: calc((100vh - 13rem) / 2);
-  height: calc((100dvh - 13rem) / 2);
+.main .works,
+.main .company {
+  height: calc((100vh - 21rem) / 2);
+  height: calc((100dvh - 21rem) / 2);
   position: relative;
+  min-height: 30rem;
 }
-.main .works a {
-  min-height: 35rem;
+.main .works a,
+.main .company a {
   padding: 4rem;
   display: block;
   min-width: 25rem;
@@ -226,11 +229,13 @@ header .mainMenu__block li::after {
   height: 100%;
   color: #fff;
 }
-.main .works .random {
+.main .works .random,
+.main .company .random {
   position: relative;
   height: 80%;
 }
-.main .works .random .bubble {
+.main .works .random .bubble,
+.main .company .random .bubble {
   display: block;
   opacity: 0;
   position: absolute;
@@ -244,25 +249,24 @@ header .mainMenu__block li::after {
   background-color: #ffffff;
   font-size: 5rem;
 }
-.main .works__text {
+.main .works__text,
+.main .company__text {
   margin: 0;
   font-size: 4rem;
   text-align: center;
 }
-.main .company {
-  height: calc((100vh - 13rem) / 2);
-  height: calc((100dvh - 13rem) / 2);
-  position: relative;
-}
 .main .company a {
-  display: block;
-  width: 70%;
-  margin: 0 auto;
-  height: 100%;
-  color: #fff;
+  padding: 4rem 0 0 0;
 }
 .main .company a img {
-  width: 100%;
+  margin: 5rem 0 0 0;
+}
+.main .company__text {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .main .yaji {
   position: absolute;
@@ -272,6 +276,52 @@ header .mainMenu__block li::after {
           transform: translate(-50%, -50%);
   width: 7rem;
   height: 7rem;
+}
+
+.wrapper {
+  margin: 2rem 2rem 0;
+  background-color: #e2e2e2;
+  border-radius: 1rem;
+  padding: 2rem 0;
+  position: relative;
+}
+.wrapper__title {
+  margin: 1.5rem 4.5rem 1.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #000;
+  font-size: 1.5rem;
+}
+.wrapper__title span {
+  margin-right: 1rem;
+}
+.wrapper__title::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  border: 0.1rem solid #949494;
+}
+.wrapper__subtitle {
+  position: absolute;
+  top: -4rem;
+  left: 2rem;
+  font-size: 5rem;
+  color: #949494;
+  margin: 0;
+}
+.wrapper .card {
+  margin: 0 2rem 2rem;
+}
+.wrapper .card img {
+  display: block;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+.wrapper .card__title {
+  background-color: #fff;
+  margin: 0;
+  padding: 2rem 4rem;
+  border-radius: 0 0 1rem 1rem;
 }
 
 .footer {

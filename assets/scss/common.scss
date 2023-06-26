@@ -5,8 +5,8 @@ html {
   font-family: "Butler", sans-serif;
 }
 
-a{
-    text-decoration:none;
+a {
+  text-decoration: none;
 }
 
 li {
@@ -15,8 +15,8 @@ li {
 
 body {
   position: relative;
-  height: 100vh;
-  height: 100dvh;
+  min-height: 100vh;
+  height: 100%;
   padding: 8rem 0 5rem;
   background: url(../../../../../wp-content/uploads/2023/06/background-madein.jpg);
   background-size: cover;
@@ -45,7 +45,7 @@ header {
     margin-left: 10%;
     img {
       width: 100%;
-      max-height: 5rem;
+      max-height: 4rem;
       padding: 1rem 0 1rem 0;
     }
   }
@@ -77,8 +77,8 @@ header {
       justify-content: center;
       align-items: center;
       /* ボタンの大きさ  */
-      width: 58px;
-      height: 48px;
+      width: 4rem;
+      height: 4rem;
       /***** 真ん中のバーガー線 *****/
       .btn-line {
         /* バーガー線の位置基準として設定 */
@@ -103,12 +103,12 @@ header {
 
         &::before {
           /* 上の線の位置 */
-          transform: translateY(-16px);
+          transform: translateY(-10px);
         }
 
         &::after {
           /* 下の線の位置 */
-          transform: translateY(16px);
+          transform: translateY(10px);
         }
         &.open {
           /***** メニューオープン時 *****/
@@ -196,16 +196,17 @@ header {
 }
 
 .main {
-  height: calc(100vh - 13rem);
-  height: calc(100dvh - 13rem);
-  .works {
-    height: calc((100vh - 13rem) / 2);
-    height: calc((100dvh - 13rem) / 2);
+  min-height: calc(100vh - 21rem);
+  min-height: calc(100dvh - 21rem);
+  padding: 4rem 0;
+  .works,
+  .company {
+    height: calc((100vh - 21rem) / 2);
+    height: calc((100dvh - 21rem) / 2);
     position: relative;
+    min-height: 30rem;
     a {
-
-    min-height: 35rem;
-    padding: 4rem;
+      padding: 4rem;
       display: block;
       min-width: 25rem;
       width: 70%;
@@ -237,18 +238,17 @@ header {
     }
   }
   .company {
-    height: calc((100vh - 13rem) / 2);
-    height: calc((100dvh - 13rem) / 2);
-    position: relative;
     a {
-      display: block;
-      width: 70%;
-      margin: 0 auto;
-      height: 100%;
-      color: #fff;
+      padding: 4rem 0 0 0;
       img {
-        width: 100%;
+        margin: 5rem 0 0 0;
       }
+    }
+    &__text {
+      position: absolute;
+      left: 50%;
+      bottom: 20%;
+      transform: translateX(-50%);
     }
   }
 
@@ -259,6 +259,52 @@ header {
     transform: translate(-50%, -50%);
     width: 7rem;
     height: 7rem;
+  }
+}
+
+.wrapper {
+  margin: 2rem 2rem 0;
+  background-color: #e2e2e2;
+  border-radius: 1rem;
+  padding: 2rem 0;
+  position: relative;
+  &__title {
+    margin: 1.5rem 4.5rem 1.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #000;
+    font-size: 1.5rem;
+    span{
+      margin-right: 1rem;
+    }
+    &::after{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    border: 0.1rem solid #949494;
+    }
+  }
+  &__subtitle {
+    position: absolute;
+    top: -4rem;
+    left: 2rem;
+    font-size: 5rem;
+    color: #949494;
+    margin: 0;
+  }
+  .card {
+    margin: 0 2rem 2rem;
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 1rem 1rem 0 0;
+    }
+    &__title {
+      background-color: #fff;
+      margin: 0;
+      padding: 2rem 4rem;
+      border-radius: 0 0 1rem 1rem;
+    }
   }
 }
 
