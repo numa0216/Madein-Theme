@@ -27,11 +27,11 @@ add_action('wp_enqueue_scripts',   function () {
 });
 
 // パンくずリストの作成
-
 function get_breadcrumb()
 {
-    if (is_home()) :
-        return; ?>
+    if (is_front_page()) :
+        return;
+        else : ?>
         <nav class="nav">
             <a href="<?php home_url(); ?>" rel="nofollow">Home</a>
             <span>»</span>

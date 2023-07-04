@@ -12,6 +12,13 @@
         </a>
       </div>
   <?php endwhile;
+    the_posts_pagination(
+      array(
+        'mid_size' => 2,
+        'prev_text' => '次へ',
+        'next_text' => '前へ',
+      )
+    );
   endif;
   wp_reset_query(); ?>
 
