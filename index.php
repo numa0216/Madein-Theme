@@ -23,4 +23,6 @@
   wp_reset_query(); ?>
 
 </div>
+
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -8,6 +8,8 @@
 //----------------------------------------------------------------------
 const gulp = require("gulp");
 const { src, dest, series, parallel, watch, tree } = require("gulp");
+// Sassをコンパイルするプラグインの読み込み
+const sass = require("gulp-sass")(require("sass"));
 
 const bs = require("browser-sync");
 
@@ -38,6 +40,23 @@ function watchTask(done) {
 //  タスク定義
 //----------------------------------------------------------------------
 exports.bs = series(bsInit, bsReload, watchTask);
+
+
+//----------------------------------------------------------------------
+//  SASS コンパイル
+//----------------------------------------------------------------------
+
+gulp.task('sass',  () => {
+  return gulp.watch("assets/scss/common.scss", () => {
+      return gulp
+      .src('assets/scss/common.scss')
+      .pipe(sass({
+                  outputStyle: 'expanded'
+              })
+          )
+      .pipe(gulp.dest('assets/css'));
+  });
+});
 
 /************************************************************************/
 /*  END OF FILE                                                         */

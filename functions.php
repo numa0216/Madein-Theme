@@ -33,7 +33,7 @@ function get_breadcrumb()
         return;
         else : ?>
         <nav class="nav">
-            <a href="<?php home_url(); ?>" rel="nofollow">Home</a>
+            <a href="<?php home_url(); ?>" rel="nofollow">HOME</a>
             <span>»</span>
             <?php if (is_category() || is_single()) : ?>
                 <!-- the_category (' • '); -->

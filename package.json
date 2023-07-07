@@ -10,7 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "gulp": "^4.0.2",
-    "gulp-cli": "^2.3.0"
+    "gulp-cli": "^2.3.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.63.6"
   },
   "devDependencies": {
     "browser-sync": "^2.29.3"
