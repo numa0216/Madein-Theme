@@ -1,0 +1,431 @@
+@charset "UTF-8";
+@import url(sanitize.css);
+html {
+  font-family: "Noto Serif JP", serif;
+  font-size: 62.5%;
+}
+html .en {
+  font-family: "Cormorant Infant", "Noto Serif JP", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  min-height: 100vh;
+  padding: 8rem 0 5rem;
+  background: url(../../../../../wp-content/uploads/2023/06/background-madein.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100dvw;
+  width: 100%;
+  height: 8rem;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+header .title {
+  display: none;
+}
+header a {
+  margin-left: 10%;
+}
+header a img {
+  width: 15rem;
+  height: 4rem;
+  padding: 1rem 0 1rem 0;
+}
+header .mainMenu {
+  margin-right: 5%;
+  /**************** 以下、ハンバーガーボタンのスタイリング ****************/
+  /**************** ここまで、ハンバーガーボタンのスタイリング ****************/
+}
+header .mainMenu button {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  text-align: inherit;
+  vertical-align: middle;
+  outline: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+header .mainMenu button:focus {
+  box-shadow: none;
+  outline: none;
+}
+header .mainMenu button:hover {
+  cursor: pointer;
+}
+header .mainMenu .btn {
+  /* バーガーの線をボタン範囲の中心に配置 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* ボタンの大きさ  */
+  width: 4rem;
+  height: 4rem;
+  /***** 真ん中のバーガー線 *****/
+}
+header .mainMenu .btn .btn-line {
+  /* バーガー線の位置基準として設定 */
+  position: relative;
+  /* 線の長さと高さ */
+  width: 100%;
+  height: 0.4rem;
+  /* バーガー線の色 */
+  background-color: #ffffff;
+  transition: 0.2s;
+  /***** 上下のバーガー線 *****/
+}
+header .mainMenu .btn .btn-line::before, header .mainMenu .btn .btn-line::after {
+  content: "";
+  /* 基準線と同じ大きさと色 */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  transition: 0.2s;
+}
+header .mainMenu .btn .btn-line::before {
+  /* 上の線の位置 */
+  transform: translateY(-10px);
+}
+header .mainMenu .btn .btn-line::after {
+  /* 下の線の位置 */
+  transform: translateY(10px);
+}
+header .mainMenu .btn .btn-line.open {
+  /***** メニューオープン時 *****/
+  /* 真ん中の線を透明に */
+  background-color: transparent;
+}
+header .mainMenu .btn .btn-line.open::before, header .mainMenu .btn .btn-line.open::after {
+  content: "";
+  transition: 0.2s;
+}
+header .mainMenu .btn .btn-line.open::before {
+  /* 上の線を傾ける */
+  transform: rotate(45deg);
+}
+header .mainMenu .btn .btn-line.open::after {
+  /* 上の線を傾ける */
+  transform: rotate(-45deg);
+}
+header .mainMenu__block {
+  position: fixed;
+  top: 7.9rem;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+header .mainMenu__block.modal-enter-active, header .mainMenu__block.modal-leave-active {
+  transform: translate(0rem, 0rem);
+  transition: transform 0.6s cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+header .mainMenu__block.modal-enter, header .mainMenu__block.modal-leave-to {
+  transform: translateX(100vw) translateX(0rem);
+  transition: transform 0.6s cubic-bezier(0.2, 0.2, 0.2, 0.7) 0ms;
+}
+header .mainMenu__block li {
+  width: 70%;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+header .mainMenu__block li a {
+  margin-right: 1rem;
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+header .mainMenu__block li::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  border: 0.1rem solid #ffffff;
+}
+
+nav {
+  margin-left: 3rem;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+nav a {
+  color: #ffffff;
+}
+nav span {
+  margin: 0 1rem;
+}
+
+.main {
+  margin: 3rem 2rem 2rem;
+  text-align: center;
+}
+.main .article__title {
+  line-height: 2.5rem;
+  font-family: "Cormorant Infant";
+  font-size: 3.5rem;
+}
+.main .article__title::after {
+  content: "";
+  display: block;
+  width: 0.1rem;
+  height: 3rem;
+  margin: 1rem auto;
+  border-left: #ffffff 0.1rem solid;
+}
+.main .article__title span {
+  position: relative;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+}
+.main .article__subtitle {
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
+}
+.main .article__subtitle span {
+  margin: 0 2rem;
+}
+.main .article__message {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+}
+.main .article__message .img {
+  width: 10rem;
+  height: 2rem;
+}
+.main .article__message h4 {
+  display: inline;
+  vertical-align: bottom;
+}
+.main .article__text {
+  line-height: 2rem;
+  margin-top: 3rem;
+  letter-spacing: 0.5rem;
+}
+.main .article img {
+  width: 80%;
+}
+.main .article .lineBlock {
+  width: calc(80% + 2rem);
+  margin-left: auto;
+  padding-left: 10%;
+  box-sizing: content-box;
+  position: relative;
+}
+.main .article .lineBlock::before {
+  border-left: 0.1rem solid #ffffff;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.1rem;
+}
+.main .article .section img {
+  display: block;
+  margin-left: auto;
+}
+.main .article .section__text {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  text-align: left;
+}
+
+.welcome {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+  width: 100dvw;
+  height: 100vh;
+  height: 100dvh;
+  background: #000000;
+}
+.welcome img {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main {
+  min-height: calc(100vh - 21rem);
+  min-height: calc(100dvh - 21rem);
+  padding: 4rem 0;
+}
+.main .works,
+.main .company {
+  position: relative;
+  height: calc((100vh - 21rem) / 2);
+  height: calc((100dvh - 21rem) / 2);
+  min-height: 30rem;
+}
+.main .works a,
+.main .company a {
+  display: block;
+  width: 70%;
+  min-width: 25rem;
+  height: 100%;
+  margin: 0 auto;
+  padding: 4rem;
+  color: #ffffff;
+}
+.main .works .random,
+.main .company .random {
+  position: relative;
+  height: 80%;
+}
+.main .works .random .bubble,
+.main .company .random .bubble {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  font-size: 5rem;
+}
+.main .works__text,
+.main .company__text {
+  margin: 0;
+  font-size: 3rem;
+  text-align: center;
+}
+.main .company a {
+  padding: 4rem 0 0 0;
+}
+.main .company a img {
+  margin: 5rem 0 0 0;
+}
+.main .company__text {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main .yaji {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7rem;
+  height: 7rem;
+}
+
+.wrapper {
+  position: relative;
+  margin: 2rem 2rem 0;
+  padding: 2rem 0;
+  border-radius: 1rem;
+  background-color: #e2e2e2;
+}
+.wrapper__title {
+  margin: 1.5rem 4.5rem 1.5rem;
+  overflow: hidden;
+  color: #000000;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+.wrapper__title span {
+  margin-right: 1rem;
+}
+.wrapper__title::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  border: 0.1rem solid #949494;
+}
+.wrapper__subtitle {
+  position: absolute;
+  top: -4rem;
+  left: 2rem;
+  margin: 0;
+  color: #949494;
+  font-size: 5rem;
+}
+.wrapper .card {
+  margin: 0 2rem 2rem;
+}
+.wrapper .card img {
+  display: block;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+.wrapper .card__title {
+  margin: 0;
+  padding: 2rem 4rem;
+  border-radius: 0 0 1rem 1rem;
+  background-color: #ffffff;
+}
+
+.footer .mainFooter img {
+  width: 100%;
+}
+.footer .mainFooter .address {
+  margin: 0 auto;
+  text-align: center;
+}
+.footer .mainFooter .address__text {
+  display: inline-block;
+  text-align: left;
+}
+.footer .front {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  width: 100svw;
+  height: 7rem;
+  padding: 0 10% 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.footer .front .icon {
+  width: 20%;
+}
+.footer .front .icon a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.footer .front .icon a img {
+  display: block;
+  width: 2.5rem;
+  height: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  /* for PC */
+}
+/*# sourceMappingURL=common.css.map */
