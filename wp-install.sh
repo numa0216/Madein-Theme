@@ -2,7 +2,7 @@
 
 # WordPressセットアップ admin_user,admin_passwordは管理画面のログインID,PW
 wp core install \
---url='http://localhost:8080' \
+--url='http://127.0.0.1:8080' \
 --title='Madein' \
 --admin_user='naganuma' \
 --admin_password='naganuma' \
