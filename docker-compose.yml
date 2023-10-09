@@ -19,7 +19,7 @@ services:
        - db
      build: ./
      volumes:
-        - ./src:/var/www/html/wp-content/themes/Madein-Theme
+        - ./dist:/var/www/html/wp-content/themes/Madein-Theme
         - wp_data:/var/www/html
         - ./wp-install.sh:/tmp/wp-install.sh
      ports:
