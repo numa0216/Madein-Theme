@@ -35,7 +35,7 @@ wp plugin install contact-form-7 --activate --allow-root
 # wp plugin install addquicktag --activate --allow-root
 
 # テーマの削除
-wp theme activate Wordpress-Theme --allow-root
+wp theme activate Madein-Theme --allow-root
 wp theme delete twentytwentyone --allow-root
 wp theme delete twentytwentytwo --allow-root
 wp theme delete twentytwentythree --allow-root

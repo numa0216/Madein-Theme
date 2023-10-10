@@ -10,7 +10,7 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 
 # 「docker exec -it 【WordPressのコンテナ名】 /bin/bash」 でコンテナに入る
 
-#     $ docker exec -it WordPressのコンテナ名 /bin/bash
+#     $ docker exec -it madein-wordpress /bin/bash
 
 # 「chmod +x /tmp/wp-install.sh」 で実行権限を付与
 # シェルスクリプトに実行権限を付与して実行できるようにします
