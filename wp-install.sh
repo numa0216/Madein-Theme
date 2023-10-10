@@ -5,7 +5,7 @@ wp core install \
 --url='http://127.0.0.1:8080' \
 --title='Madein' \
 --admin_user='naganuma' \
---admin_password='naganuma' \
+--admin_password='Protect0216' \
 --admin_email='info@test.com' \
 --allow-root
 
@@ -35,10 +35,10 @@ wp plugin install contact-form-7 --activate --allow-root
 # wp plugin install addquicktag --activate --allow-root
 
 # テーマの削除
+wp theme activate Wordpress-Theme --allow-root
 wp theme delete twentytwentyone --allow-root
 wp theme delete twentytwentytwo --allow-root
 wp theme delete twentytwentythree --allow-root
-# wp theme delete twentytwenty --allow-root
 
 # パーマリンク更新
 wp option update permalink_structure /%postname%/ --allow-root
