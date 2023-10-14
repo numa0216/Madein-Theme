@@ -5,7 +5,7 @@ wp core install \
 --url='http://127.0.0.1:8080' \
 --title='Madein' \
 --admin_user='naganuma' \
---admin_password='Protect0216' \
+--admin_password='naganuma' \
 --admin_email='info@test.com' \
 --allow-root
 
@@ -26,19 +26,21 @@ wp plugin delete akismet --allow-root
 
 # プラグインのインストール (必要に応じてコメントアウトを外す)
 wp plugin install wp-multibyte-patch --activate --allow-root
-# wp plugin install backwpup --activate --allow-root
-# wp plugin install siteguard --activate --allow-root
 wp plugin install contact-form-7 --activate --allow-root
-# wp plugin install wp-mail-smtp --activate --allow-root
-# wp plugin install all-in-one-seo-pack --activate --allow-root
-# wp plugin install broken-link-checker --activate --allow-root
-# wp plugin install addquicktag --activate --allow-root
+wp plugin install wp-mail-smtp --activate --allow-root
+wp plugin install advanced-custom-fields --activate --allow-root
+wp plugin install custom-post-type-ui --activate --allow-root
+wp plugin install query-monitor --activate --allow-root
 
-# テーマの削除
+# テーマの有効化
 wp theme activate Madein-Theme --allow-root
+# テーマの削除
 wp theme delete twentytwentyone --allow-root
 wp theme delete twentytwentytwo --allow-root
 wp theme delete twentytwentythree --allow-root
 
 # パーマリンク更新
 wp option update permalink_structure /%postname%/ --allow-root
+
+# 固定ページの追加
+wp post create --post_type=page --post_title=お問い合わせ --post_status=publish --post_name=contact --allow-root
