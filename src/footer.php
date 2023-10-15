@@ -1,33 +1,43 @@
 <footer class="footer">
-  <div class="mainFooter">
-    <img src="<?php echo get_template_directory_uri() . '/assets/img/sample.webp'; ?>" alt="sample">
-    <div class="address">
-      <p class="address__text"><span>〒963-8601</span><br>福島県郡山市朝日１丁目２３−７</p>
+  <div class="footer__main">
+    <div class="title">
+      <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo-white.svg'); ?>" alt="logo">
+      <div class="address">
+        <p class="address__text"><span>〒963-8601</span><br>福島県郡山市朝日１丁目２３−７</p>
+      </div>
     </div>
-    <?php
-    wp_nav_menu(array(
-      'theme_location' => 'footer-menu'
-    ));
-    ?>
+    <div class="menu">
+      <div class="menu__list">
+        <ul>
+          <li><a href="">Company</a></li>
+          <li><a href="">Works</a></li>
+          <li><a href="">News</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu__sns">
+        <div class="icon">
+          <a href="">
+            <img src="<?php echo get_template_directory_uri() . '/assets/img/Twitter-white.svg'; ?>" alt="">
+          </a>
+        </div>
+        <div class="icon">
+          <a href="">
+            <img src="<?php echo get_template_directory_uri() . '/assets/img/Instagram-white.svg'; ?>" alt="">
+          </a>
+        </div>
+        <div class="icon">
+          <a href="">
+            <img src="<?php echo get_template_directory_uri() . '/assets/img/youtube-white.svg'; ?>" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="sns">
-    <div class="icon">
-      <a href="">
-        <img src="<?php echo get_template_directory_uri() . '/assets/img/Twitter-white.svg'; ?>" alt="">
-      </a>
-    </div>
-    <div class="icon">
-      <a href="">
-        <img src="<?php echo get_template_directory_uri() . '/assets/img/Instagram-white.svg'; ?>" alt="">
-      </a>
-      </a>
-    </div>
-    <div class="icon">
-      <a href="">
-        <img src="<?php echo get_template_directory_uri() . '/assets/img/youtube-white.svg'; ?>" alt="">
-      </a>
-    </div>
-  </div>
+
+
+
+  <?php /* フロントページ用のフッター */ ?>
   <div class="front" style="display: none;">
     <div class="icon">
       <a href="">
@@ -56,6 +66,15 @@
       </a>
     </div>
   </div>
+
+  <?php /* コピーライト */ ?>
+  <?php $blog_info = get_bloginfo('name');
+  if (!empty($blog_info)) : ?>
+    <span class="copyright">
+      Copyright © <?php echo date("Y") ?> <a class="site-name" href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php echo esc_html($blog_info); ?></a> All Rights Reserved.
+    </span>
+  <?php endif; ?>
+
 </footer>
 <?php wp_footer(); ?>
 </body>

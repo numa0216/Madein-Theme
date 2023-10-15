@@ -19,7 +19,7 @@
     <header>
         <h1 class="title">MADEIN</h1>
         <a href="https://madein.works">
-            <img src="<?php echo get_template_directory_uri() . '/assets/img/logo-white.svg'; ?>" alt="logo">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo-white.svg'); ?>" alt="logo">
         </a>
         <div id="modalMenu" class="mainMenu">
             <button type="button" class="btn" @click="show = !show">
@@ -37,4 +37,4 @@
         </div>
     </header>
 
-    <?php echo get_breadcrumb(); ?>
+    <?php get_template_part('templates/parts/breadcrumb'); ?>
