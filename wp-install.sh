@@ -42,5 +42,9 @@ wp theme delete twentytwentythree --allow-root
 # パーマリンク更新
 wp option update permalink_structure /%postname%/ --allow-root
 
+# 翻訳
+wp core update --locale=ja --force --allow-root
+wp core language update --allow-root
+
 # 固定ページの追加
 wp post create --post_type=page --post_title=お問い合わせ --post_status=publish --post_name=contact --allow-root
