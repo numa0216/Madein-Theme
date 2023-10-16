@@ -46,9 +46,30 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/, // 対象にするファイルを指定
         use: [
           MiniCssExtractPlugin.loader, // JSとCSSを別々に出力する
-          "css-loader",
-          "postcss-loader", // オプションはpostcss.config.jsで指定
-          "sass-loader",
+          {
+            loader: "css-loader",
+            options: {
+              // dev モードではソースマップを付ける
+              sourceMap: true,
+            },
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              sourceMap: true,
+              postcssOptions: {
+                plugins: [
+                 require('autoprefixer')({ grid: true })
+                ],
+              },
+            },
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
           // 下から順にコンパイル処理が実行されるので、記入順序に注意
         ],
       },
