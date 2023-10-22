@@ -23,19 +23,19 @@
       &__list {
         ul {
           padding: 0;
-          margin: 3rem 0;
+          margin: 1rem 0 3rem;
         }
         li {
           line-height: 4rem;
           text-align: center;
         }
       }
-      &__sns{
+      &__sns {
         display: flex;
         justify-content: space-between;
         width: 50%;
         margin: 0 auto;
-        .icon{
+        .icon {
           width: 3rem;
         }
         // .icon{
@@ -70,7 +70,7 @@
       }
     }
   }
-  .copyright{
+  .copyright {
     display: block;
     text-align: center;
     margin: 4rem 0 2rem;

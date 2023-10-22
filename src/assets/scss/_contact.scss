@@ -1,0 +1,27 @@
+.form {
+  color: #000;
+  margin: 4.5rem 4.5rem 0;
+  input,
+  textarea {
+    width: 100%;
+    border: none;
+    border-radius: .5rem;
+  }
+  input{
+    line-height: 3rem;
+  }
+  input[type="submit"]{
+    width: 70%;
+    display: block;
+    margin: 3rem auto 0;
+    color: #FFF;
+    background-color: #949494;
+  }
+}
+@media screen and (min-width: 768px) {
+    /* for PC */
+    .form{
+        max-width: 40rem;
+        margin: 4.5rem auto;
+    }
+  }

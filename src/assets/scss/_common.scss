@@ -1,6 +1,6 @@
 
 html {
-  font-family: "Noto Serif JP", serif;
+  font-family:"Butler", sans-serif, "Noto Serif JP", serif;
   font-size: 62.5%;
   .en {
     font-family: "Cormorant Infant", "Noto Serif JP", serif;
@@ -210,12 +210,12 @@ body {
 
 .wrapper {
   position: relative;
-  margin: 2rem 2rem 0;
+  margin: 4rem 2rem 4rem;
   padding: 2rem 0;
   border-radius: 1rem;
   background-color: #e2e2e2;
   &__title {
-    margin: 1.5rem 4.5rem 1.5rem;
+    margin: 2rem 4.5rem 1.5rem;
     overflow: hidden;
     color: #000000;
     font-size: 1.5rem;
@@ -232,7 +232,7 @@ body {
   }
   &__subtitle {
     position: absolute;
-    top: -4rem;
+    top: -3rem;
     left: 2rem;
     margin: 0;
     color: #949494;
@@ -256,4 +256,22 @@ body {
 
 @media screen and (min-width: 768px) {
   /* for PC */
+  .wrapper {
+   max-width: 70rem;
+   margin: 8rem auto;
+   &__title {
+     margin: 6rem 6.5rem 1.5rem;
+     font-size: 2rem;
+     span {
+       margin-right: 5rem;
+     }
+     &::after {
+       border: .3rem solid #94949471;
+     }
+   }
+   &__subtitle {
+     top: -8rem;
+     font-size: 13rem;
+   }
+  }
 }
