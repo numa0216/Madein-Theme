@@ -90,9 +90,8 @@ body {
       width: 80%;
     }
     .lineBlock {
-      width: calc(80% + 2rem);
-      margin-left: auto;
-      padding-left: 10%;
+      width: 90%;
+      margin: auto;
       box-sizing: content-box;
       position: relative;
       &::before{
@@ -106,6 +105,7 @@ body {
     }
     .section {
       // text-align: left;
+      padding: 0 0 0 4rem;
       img {
         display: block;
         margin-left: auto;
