@@ -77,3 +77,28 @@
     font-size: 1rem;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .footer {
+    &__main {
+      margin: 0 10%;
+      padding: 2rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .menu {
+      &__list {
+        ul {
+          max-width: 50rem;
+          display: flex;
+          justify-content: space-between;
+          font-size: 1.6rem;
+          margin: 1rem auto 3rem;
+        }
+      }
+      &__sns {
+        max-width: 25rem;
+      }
+    }
+  }
+}

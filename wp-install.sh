@@ -47,4 +47,6 @@ wp core update --locale=ja --force --allow-root
 wp core language update --allow-root
 
 # 固定ページの追加
-wp post create --post_type=page --post_title=お問い合わせ --post_status=publish --post_name=contact --allow-root
+wp post create --post_type=page --post_title=Contact --post_status=publish --post_name=contact --allow-root
+wp post create --post_type=page --post_title=Flow --post_status=publish --post_name=flow --allow-root
+wp post create --post_type=page --post_title=Concept --post_status=publish --post_name=concept --allow-root

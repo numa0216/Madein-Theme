@@ -1,43 +1,45 @@
 .wrapper {
-  .card {
-    margin: 0 2rem 2rem;
-    img {
-      display: block;
-      width: 100%;
-      border-radius: 1rem 1rem 0 0;
-    }
-    &__title {
-      margin: 0;
-      padding: 2rem 4rem;
-      border-radius: 0 0 1rem 1rem;
-      background-color: #ffffff;
-      color: #000;
-      font-size: 1.6rem;
-      position: relative;
-
-      &::before,
-      &::after {
-        position: absolute;
-        top: 1rem;
-        bottom: 0;
-        right: 2rem;
-        margin: auto;
-        content: "";
-        vertical-align: middle;
+  .container {
+    .card {
+      margin: 0 2rem 2rem;
+      img {
+        display: block;
+        width: 100%;
+        border-radius: 1rem 1rem 0 0;
       }
+      &__title {
+        margin: 0;
+        padding: 2rem 4rem;
+        border-radius: 0 0 1rem 1rem;
+        background-color: #ffffff;
+        color: #000;
+        font-size: 1.6rem;
+        position: relative;
 
-      &::before {
-        width: 8rem;
-        height: 0.2rem;
-        background: #939393;
-      }
-      &::after {
-        right: 2.2rem;
-        width: 2rem;
-        height: 2rem;
-        border-top: .2rem solid #939393;
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
+        &::before,
+        &::after {
+          position: absolute;
+          top: 1rem;
+          bottom: 0;
+          right: 2rem;
+          margin: auto;
+          content: "";
+          vertical-align: middle;
+        }
+
+        &::before {
+          width: 8rem;
+          height: 0.2rem;
+          background: #939393;
+        }
+        &::after {
+          right: 2.2rem;
+          width: 2rem;
+          height: 2rem;
+          border-top: 0.2rem solid #939393;
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
       }
     }
   }

@@ -1,6 +1,5 @@
-
 html {
-  font-family:"Butler", sans-serif, "Noto Serif JP", serif;
+  font-family: "Butler", sans-serif, "Noto Serif JP", serif;
   font-size: 62.5%;
   .en {
     font-family: "Cormorant Infant", "Noto Serif JP", serif;
@@ -9,7 +8,7 @@ html {
 
 a {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 
 li {
@@ -94,13 +93,13 @@ body {
       margin: auto;
       box-sizing: content-box;
       position: relative;
-      &::before{
-        border-left: .1rem solid #ffffff;
+      &::before {
+        border-left: 0.1rem solid #ffffff;
         content: "";
         position: absolute;
         top: 0;
         left: 0;
-        width: .1rem;
+        width: 0.1rem;
       }
     }
     .section {
@@ -209,55 +208,59 @@ body {
 }
 
 .wrapper {
-  position: relative;
-  margin: 4rem 2rem 4rem;
-  padding: 2rem 0;
-  border-radius: 1rem;
-  background-color: #e2e2e2;
-  &__title {
-    margin: 2rem 4.5rem 1.5rem;
-    overflow: hidden;
-    color: #000000;
-    font-size: 1.5rem;
-    white-space: nowrap;
-    span {
-      margin-right: 1rem;
+  .container {
+    position: relative;
+    margin: 4rem 2rem 4rem;
+    padding: 2rem 0;
+    border-radius: 1rem;
+    background-color: #e2e2e2;
+    &__title {
+      margin: 2rem 4.5rem 1.5rem;
+      overflow: hidden;
+      color: #000000;
+      font-size: 1.5rem;
+      white-space: nowrap;
+      span {
+        margin-right: 1rem;
+      }
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        border: 0.1rem solid #949494;
+      }
     }
-    &::after {
-      content: "";
-      display: inline-block;
-      width: 100%;
-      border: 0.1rem solid #949494;
+    &__subtitle {
+      position: absolute;
+      top: -3rem;
+      left: 2rem;
+      margin: 0;
+      color: #949494;
+      font-size: 5rem;
     }
-  }
-  &__subtitle {
-    position: absolute;
-    top: -3rem;
-    left: 2rem;
-    margin: 0;
-    color: #949494;
-    font-size: 5rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   /* for PC */
   .wrapper {
-   max-width: 70rem;
-   margin: 8rem auto;
-   &__title {
-     margin: 6rem 6.5rem 1.5rem;
-     font-size: 2rem;
-     span {
-       margin-right: 4rem;
-     }
-     &::after {
-       border: .3rem solid #94949471;
-     }
-   }
-   &__subtitle {
-     top: -8rem;
-     font-size: 13rem;
-   }
+    .container {
+      max-width: 70rem;
+      margin: 8rem auto;
+      &__title {
+        margin: 6rem 6.5rem 1.5rem;
+        font-size: 2rem;
+        span {
+          margin-right: 4rem;
+        }
+        &::after {
+          border: 0.3rem solid #94949471;
+        }
+      }
+      &__subtitle {
+        top: -8rem;
+        font-size: 13rem;
+      }
+    }
   }
 }
