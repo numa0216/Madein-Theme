@@ -1,9 +1,95 @@
-.wrapper {
-  .container {
-    padding: 0;
+.single {
+  position: relative;
+  margin: 4rem 2rem 4rem;
+  padding: 0 0 3rem 0;
+  border-radius: 1rem;
+  background-color: #e2e2e2;
+  &__title {
+    margin: 2rem 4.5rem 0;
     overflow: hidden;
-    img{
+    color: #000000;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    span {
+      margin-right: 1rem;
+    }
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      border: 0.1rem solid #949494;
+    }
+  }
+  &__subtitle {
+    position: absolute;
+    top: -3rem;
+    left: 2rem;
+    margin: 0;
+    color: #949494;
+    font-size: 5rem;
+  }
+  &__img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+  }
+  &__content {
+    margin: 2rem 0 0 0;
+    color: #000;
+    line-height: 4rem;
+    figure {
+      margin: 0;
+    }
+    p {
+      margin: 0 7rem 1rem;
+    }
+    h2 {
+      margin: 3rem 4.5rem 3rem;
+      overflow: hidden;
+      color: #000000;
+      font-size: 1.5rem;
+      white-space: nowrap;
+      &::after {
+        content: "";
+        display: inline-block;
         width: 100%;
+        border: 0.1rem solid #949494;
+        margin: 0 0 0 4rem;
+      }
+    }
+    img {
+      width: 100%;
+      padding: 0 2rem 2rem 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* for PC */
+  .single {
+    margin: 8rem auto;
+    width: 100%;
+    padding: 0 0 5rem 0;
+    &__title {
+      margin: 4rem 6.5rem 4rem;
+      font-size: 2rem;
+      span {
+        margin-right: 4rem;
+      }
+      &::after {
+        border: 0.3rem solid #94949471;
+      }
+    }
+    &__subtitle {
+      top: -8rem;
+      font-size: 13rem;
+    }
+    &__content {
+      p {
+        margin: 0 10rem 1rem;
+      }
+      h2 {
+        margin: 3rem 6.5rem 4rem;
+      }
     }
   }
 }

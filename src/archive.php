@@ -13,18 +13,18 @@
               </div>
             </a>
           </div>
-        <?php endwhile; ?>
+      <?php endwhile;
+      endif; ?>
     </div>
-  <?php
-        the_posts_pagination(
-          array(
-            'mid_size' => 2,
-            'prev_text' => '<',
-            'next_text' => '>',
-          )
-        );
-      endif;
-      wp_reset_query(); ?>
+    <?php
+    the_posts_pagination(
+      array(
+        'mid_size' => 2,
+        'prev_text' => '<',
+        'next_text' => '>',
+      )
+    );
+    wp_reset_query(); ?>
   </div>
   <?php get_sidebar(); ?>
 </div>
