@@ -31,6 +31,7 @@
                 <?php
                 $string = wp_get_archives(array(
                     'show_post_count' => 1,
+                    'post_type' => $post_slug,
                     'echo' => 0
                 ));
                 echo preg_replace('/<\/a>&nbsp;(\([0-9]*\))/', ' <span class="count">$1</span></a>', $string);
@@ -42,7 +43,8 @@
     $string = wp_list_categories(array(
         'taxonomy' => $main_cat,
         'show_count' => 1,
-        'echo' => 0
+        'echo' => 0,
+        'title_li' => ''
     ));
     ?>
     <?php if ($string !== false) : ?>

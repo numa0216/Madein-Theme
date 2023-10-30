@@ -1,25 +1,27 @@
 .sidebar {
+  height: fit-content;
   margin: 4rem 2rem 4rem;
   padding: 2rem;
   border-radius: 1rem;
   background-color: #e2e2e2;
+  color: #000;
+  a{
+    color: #000;
+  }
   .box {
-    margin: 0 0 0 2rem;
+    margin: 3rem 0 1rem 2rem;
     &__title {
-      margin: 2rem 0 2rem 0;
+      // margin: 2rem 0 2rem 0;
     }
     &__list {
       margin: 0;
+      li{
+        margin: 1rem 0 0 0;
+      }
     }
   }
 }
-@media screen and (min-width: 768px) {
-  /* for PC */
-  .wrapper {
-    .container {
-    }
-  }
-}
+
 @media screen and (min-width: 768px) {
   .sidebar {
     margin: 8rem 0 0 0;

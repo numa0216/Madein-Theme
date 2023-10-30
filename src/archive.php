@@ -8,7 +8,11 @@
           <div class="card">
             <a href="<?php the_permalink(); ?>">
               <div>
-                <img class="card__img-dummy" src="<?php echo get_template_directory_uri(); ?>/assets/img/dammy.png" alt="">
+                <?php if (has_post_thumbnail()) : ?>
+                  <?php the_post_thumbnail('large'); ?>
+                <?php else : ?>
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/dammy.png" alt="デフォルト画像" />
+                <?php endif; ?>
                 <h2 class="card__title"><?php the_title(); ?></h2>
               </div>
             </a>
