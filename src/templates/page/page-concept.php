@@ -1,4 +1,3 @@
-<main class="main">
     <article id="concept" class="article">
         <h1 class="article__title">Concept<br><span>コンセプト</span></h1>
         <h3 class="article__subtitle"><span>[</span>MADE in あなた<span>]</span></h3>
@@ -9,5 +8,3 @@
         </div>
         <p class="article__text">私たちは、<br>あなたの為だけの自由な暮らし造りを<br>お手伝いさせていただく者です。</p>
     </article>
-
-</main>

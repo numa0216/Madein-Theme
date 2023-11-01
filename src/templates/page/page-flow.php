@@ -1,4 +1,3 @@
-<main class="main">
     <article id="flow" class="article">
         <h1 class="article__title">Flow<br><span>家づくりの流れ</span></h1>
         <h3 class="article__subtitle">あなたのためだけの暮らし造りへの物語</h3>
@@ -40,5 +39,3 @@
             </section>
         </div>
     </article>
-
-</main>

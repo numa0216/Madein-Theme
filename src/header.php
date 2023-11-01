@@ -18,7 +18,7 @@
 <body>
     <header>
         <h1 class="title">MADEIN</h1>
-        <a href="https://madein.works">
+        <a href="<?php echo esc_url(home_url('/')) ?>">
             <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo-white.svg'); ?>" alt="logo">
         </a>
         <div id="modalMenu" class="mainMenu">
@@ -38,3 +38,4 @@
     </header>
 
     <?php get_template_part('templates/parts/breadcrumb'); ?>
+<main class="main">

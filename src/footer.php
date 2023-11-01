@@ -1,5 +1,6 @@
+</main>
 <footer class="footer">
-  <div class="footer__main">
+  <div class="footer__main" <?php if(is_front_page()) echo 'style="display: none;"';?>>
     <div class="title">
       <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo-white.svg'); ?>" alt="logo">
       <div class="address">
@@ -8,12 +9,11 @@
     </div>
     <div class="menu">
       <div class="menu__list">
-        <ul>
-          <li><a href="">Company</a></li>
-          <li><a href="">Works</a></li>
-          <li><a href="">News</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
+        <?php
+        wp_nav_menu(array(
+          'theme_location' => 'main-menu'
+        ));
+        ?>
       </div>
       <div class="menu__sns">
         <div class="icon">
@@ -35,10 +35,8 @@
     </div>
   </div>
 
-
-
   <?php /* フロントページ用のフッター */ ?>
-  <div class="front" style="display: none;">
+  <div class="front" <?php if(!is_front_page()) echo 'style="display: none;"';?> >
     <div class="icon">
       <a href="">
         <img src="<?php echo get_template_directory_uri() . '/assets/img/Twitter-white.svg'; ?>" alt="">
@@ -70,7 +68,7 @@
   <?php /* コピーライト */ ?>
   <?php $blog_info = get_bloginfo('name');
   if (!empty($blog_info)) : ?>
-    <span class="copyright">
+    <span class="copyright" <?php if(is_front_page()) echo 'style="display: none;"';?>>
       Copyright © <?php echo date("Y") ?> <a class="site-name" href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php echo esc_html($blog_info); ?></a> All Rights Reserved.
     </span>
   <?php endif; ?>

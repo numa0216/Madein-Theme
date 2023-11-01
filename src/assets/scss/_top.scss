@@ -1,0 +1,110 @@
+.top {
+  min-height: calc(100vh - 21rem);
+  min-height: calc(100dvh - 21rem);
+  max-width: 40rem;
+  padding: 1rem 0;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  position: relative;
+  margin: 0 auto;
+  .works,
+  .company {
+    place-items: center;
+    position: relative;
+    a {
+      place-items: center;
+      display: grid;
+      min-width: 30rem;
+      height: 100%;
+      margin: 0 auto;
+      color: #ffffff;
+      gap: 1rem;
+      img {
+        padding: 0 5rem;
+      }
+    }
+    .random {
+      position: relative;
+      height: 15rem;
+      width: 100%;
+      .bubble {
+        display: block;
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background-color: #ffffff;
+        font-size: 5rem;
+        &:nth-child(1) {
+          left: 55%;
+          top: 0;
+        }
+        &:nth-child(2) {
+          left: 30%;
+          top: 0;
+        }
+      }
+    }
+    &__text {
+      margin: 0;
+      font-size: 3rem;
+      text-align: center;
+      padding: 2rem 0 0;
+    }
+  }
+
+  .yaji {
+    width: 7rem;
+    height: 7rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .top {
+    grid-template-columns: 45% 1fr 45%;
+    max-width: 100%;
+
+  .works,
+  .company {
+    a {
+        grid-template-rows: 80% auto;
+        width: auto;
+        gap: 3rem;
+      img {
+        padding: 0;
+        height: 100%;
+        display: block;
+      }
+    }
+    .random {
+      position: relative;
+      height: 15rem;
+      width: 100%;
+      .bubble {
+        display: block;
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background-color: #ffffff;
+        font-size: 5rem;
+        &:nth-child(1) {
+          left: 55%;
+          top: 0;
+        }
+        &:nth-child(2) {
+          left: 30%;
+          top: 0;
+        }
+      }
+    }
+    &__text {
+      margin: 0;
+      font-size: 3rem;
+      text-align: center;
+      padding: 2rem 0 0;
+    }
+  }
+  }
+}
