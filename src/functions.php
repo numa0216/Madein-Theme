@@ -24,5 +24,6 @@ add_action('wp_enqueue_scripts',   function () {
     );
     wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js', array(), '3.11.5', false);
     wp_enqueue_script('scrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js', array(), '3.11.5', false);
+    wp_enqueue_script('split-type', 'https://unpkg.com/split-type', array(), '0.3.4', false);
 });
 
