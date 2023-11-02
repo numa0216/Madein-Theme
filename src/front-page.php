@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
 <div id="welcome" class="welcome">
-    <a href="https://madein.works">
-        <img id="mainLogo" src="../../../wp-content/uploads/2023/06/logo.svg" alt="メインロゴ">
+    <a id="mainLogo" href="<?php echo esc_url(home_url('/')) ?>">
+        <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo-black.svg'); ?>" alt="logo">
     </a>
 </div>
 <div class="top">
@@ -10,39 +10,39 @@
         <a href="/works">
             <div class="random">
                 <span class="bubble">
-                    <span class="text">magic</span>
+                    <span class="text">Ocean</span>
                     <span class="bg"></span>
                 </span>
                 <span class="bubble">
-                    <span class="text">magic</span>
+                    <span class="text">Organic</span>
                     <span class="bg"></span>
                 </span>
                 <span class="bubble">
-                    <span class="text">magic</span>
+                    <span class="text">Aroma</span>
                     <span class="bg"></span>
                 </span>
                 <span class="bubble">
-                    <span class="text">magic</span>
+                    <span class="text">Jazz</span>
                     <span class="bg"></span>
                 </span>
                 <span class="bubble">
-                    <span class="text">magic</span>
+                    <span class="text">Sun</span>
                     <span class="bg"></span>
                 </span>
                 <span class="bubble">
-                    <span class="text">magic</span>
+                    <span class="text">Relax</span>
                     <span class="bg"></span>
                 </span>
                 <span class="bubble">
-                    <span class="text">magic</span>
+                    <span class="text">Coffee</span>
                     <span class="bg"></span>
                 </span>
                 <span class="bubble">
-                    <span class="text">magic</span>
+                    <span class="text">Moon</span>
                     <span class="bg"></span>
                 </span>
                 <span class="bubble">
-                    <span class="text">magic</span>
+                    <span class="text">Retro</span>
                     <span class="bg"></span>
                 </span>
             </div>
@@ -50,12 +50,12 @@
         </a>
     </div>
     <div class="yaji">
-        <img src="https://madein.works/wp-content/uploads/2023/06/矢印アイコン　下6.svg" alt="">
+        <img src="<?php echo get_template_directory_uri() . '/assets/img/arrow.svg'; ?>" alt="">
     </div>
     <div class="company">
-        <a href="/company">
+        <a href="/concept/">
             <img class="company__img" src="<?php echo get_template_directory_uri() . '/assets/img/symbol-white.svg'; ?>" alt="">
-            <p class="company__text">Company</p>
+            <img class="company__logo" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo-white.svg'); ?>" alt="logo">
         </a>
     </div>
     <!-- <span class="blur"></span>

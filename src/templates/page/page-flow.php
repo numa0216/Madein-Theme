@@ -3,7 +3,7 @@
         <span id="border" :style="{ height: height + 'px'}" ref="border"></span>
         <h3 class="article__subtitle">あなたのためだけの暮らし造りへの物語</h3>
         <div class="lineBlock">
-            <section class="section">
+            <section class="section right">
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/sample.webp'; ?>" alt="sample">
                 <div class="section__text">
                     <h4>1<span>『</span>あなた<span>』</span></h4>
@@ -11,7 +11,7 @@
                     <p>・SNSや雑誌などからお好きな画像、色、材質、モノを集めていただきます。</p>
                 </div>
             </section>
-            <section class="section">
+            <section class="section left">
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/sample.webp'; ?>" alt="sample">
                 <div class="section__text">
                     <h4>2<span>『</span>想像<span>』</span></h4>
@@ -20,7 +20,7 @@
                     <p>・資金面や住宅ローンなどの不安な部分もサポートいたします。</p>
                 </div>
             </section>
-            <section class="section">
+            <section class="section right">
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/sample.webp'; ?>" alt="sample">
                 <div class="section__text">
                     <h4>3<span>『</span>共有<span>』</span></h4>
@@ -28,7 +28,7 @@
                     <p>3Dモデルを活用し、常にリアルな3Dパースを提供しイメージを共有させていただきます。</p>
                 </div>
             </section>
-            <section class="section">
+            <section class="section left">
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/sample.webp'; ?>" alt="sample">
                 <div class="section__text">
                     <h4>4<span>『</span>創造<span>』</span></h4>
@@ -36,7 +36,7 @@
                     <p>BIMで設計をしてCGパースを作成しているので、イメージ通りの建物が作れます。</p>
                 </div>
             </section>
-            <section class="section" ref="secLast">
+            <section class="section right" ref="secLast">
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/sample.webp'; ?>" alt="sample">
                 <div class="section__text">
                     <h4>5<span>『</span>家族<span>』</span></h4>

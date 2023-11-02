@@ -62,6 +62,7 @@
           align-items: center;
 
           .text {
+            margin: 0 0 0 5rem;
             color: #303030;
             font-size: 1.4rem;
             width: 80%;
@@ -112,7 +113,7 @@
             .text {
               width: 100%;
               display: grid;
-              grid-template-columns: 9rem 15rem 1fr;
+              grid-template-columns: 12rem 7rem 1fr;
               gap: 5rem;
               &__title {
                 display: inline-block;

@@ -30,7 +30,7 @@ const modal = new Vue({
   },
 });
 
-$(function () {
+jQuery(function () {
   const webStorage = function () {
     if (sessionStorage.getItem("access")) {
       //2回目以降アクセス時の処理
@@ -48,31 +48,34 @@ $(function () {
   webStorage();
 });
 
-const scroll2 = new Vue({
-  el: "#flow",
-  data() {
-    return {
-      height: 3,
-    };
-  },
-  mounted() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  methods: {
-    handleScroll() {
-      const winHeight = window.outerHeight / 2;
-      const elOffset = this.$refs.border.getBoundingClientRect().top;
-      const secLastOffset = this.$refs.secLast.getBoundingClientRect().bottom;
-      if (secLastOffset - winHeight < 0) {
-        this.height = winHeight - elOffset + (secLastOffset - winHeight);
-      } else if (winHeight > elOffset) {
-        this.height = winHeight - elOffset;
-      } else {
-        this.height = 3;
-      }
+const flow = document.getElementById("flow");
+if(flow){
+  const scroll2 = new Vue({
+    el: "#flow",
+    data() {
+      return {
+        height: 3,
+      };
     },
-  },
-});
+    mounted() {
+      window.addEventListener("scroll", this.handleScroll);
+    },
+    methods: {
+      handleScroll() {
+        const winHeight = window.outerHeight / 2;
+        const elOffset = this.$refs.border.getBoundingClientRect().top;
+        const secLastOffset = this.$refs.secLast.getBoundingClientRect().bottom;
+        if (secLastOffset - winHeight < 0) {
+          this.height = winHeight - elOffset + (secLastOffset - winHeight);
+        } else if (winHeight > elOffset) {
+          this.height = winHeight - elOffset;
+        } else {
+          this.height = 3;
+        }
+      },
+    },
+  });
+}
 
 const text = new SplitType(".container__subtitle");
 const text2 = new SplitType(".single__subtitle");
@@ -122,7 +125,7 @@ cards.forEach((card) => {
       ease: "power1.out",
       scrollTrigger: {
         trigger: card, //アニメーションが始まるトリガーとなる要素
-        start: "top-=200px center", //アニメーションが始まる位置
+        start: "top bottom", //アニメーションが始まる位置
       },
     }
   );
@@ -149,19 +152,41 @@ gsap.fromTo(
   }
 );
 
-const section = gsap.utils.toArray(".section");
-section.forEach((sec) => {
+const sectionR = gsap.utils.toArray(".section.right");
+sectionR.forEach((sec) => {
   gsap.fromTo(
     sec,
     {
-      y: 50, //アニメーション開始前の位置
-      autoAlpha: 0, //アニメーション開始前の状態
+      x: 50, //アニメーション開始前の位置
+      opacity: 0, //アニメーション開始前の状態
     },
     {
       //アニメーション後の記入
-      y: 0, //アニメーション後の位置
+      x: 0, //アニメーション後の位置
       delay: 0.3 /*アニメーションのスタートまでの遅延時間*/,
-      autoAlpha: 1, //アニメーション後の状態
+      opacity: 1, //アニメーション後の状態
+      duration: 1.5 /*アニメーションの時間*/,
+      ease: "power1.out",
+      scrollTrigger: {
+        trigger: sec, //アニメーションが始まるトリガーとなる要素
+        start: "top-=200px center", //アニメーションが始まる位置
+      },
+    }
+  );
+});
+const sectionL = gsap.utils.toArray(".section.left");
+sectionL.forEach((sec) => {
+  gsap.fromTo(
+    sec,
+    {
+      x: -50, //アニメーション開始前の位置
+      opacity: 0, //アニメーション開始前の状態
+    },
+    {
+      //アニメーション後の記入
+      x: 0, //アニメーション後の位置
+      delay: 0.3 /*アニメーションのスタートまでの遅延時間*/,
+      opacity: 1, //アニメーション後の状態
       duration: 1.5 /*アニメーションの時間*/,
       ease: "power1.out",
       scrollTrigger: {
@@ -185,7 +210,7 @@ TL.fromTo(
   }
 )
   .fromTo(
-    ".works__text,.yaji",
+    ".works__text",
     {
       opacity: 0,
       y: 10,
@@ -197,7 +222,7 @@ TL.fromTo(
     }
   )
   .fromTo(
-    ".company__img",
+    ".yaji",
     {
       opacity: 0,
       y: 10,
@@ -209,7 +234,7 @@ TL.fromTo(
     }
   )
   .fromTo(
-    ".company__text",
+    ".company__img,.company__logo",
     {
       opacity: 0,
       y: 10,

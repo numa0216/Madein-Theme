@@ -45,9 +45,9 @@ body {
   margin: 3rem 2rem 2rem;
   .article {
     text-align: center;
+    margin: 10rem 0;
     &__title {
       line-height: 2.5rem;
-      font-family: "Cormorant Infant";
       font-size: 3.5rem;
       &::after {
         content: "";
@@ -91,6 +91,7 @@ body {
       h4 {
         display: inline;
         vertical-align: bottom;
+        line-height: 2rem;
       }
     }
     &__text {
@@ -105,7 +106,6 @@ body {
 }
 
 .welcome {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -114,14 +114,24 @@ body {
   width: 100dvw;
   height: 100vh;
   height: 100dvh;
-  background: #000000;
-  img {
+  background-image: url(../img/welcome.jpg);
+  object-fit: cover;
+  background-position: center;
+  a {
+    padding: 2rem;
+    width: 70%;
+    backdrop-filter: blur(12px);
     display: block;
     opacity: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
@@ -159,6 +169,52 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    padding-top: 10rem;
+  }
+
+  .welcome {
+    a {
+      padding: 3rem;
+      width: auto;
+    }
+  }
+
+  .main {
+    .article {
+      &__title {
+        line-height: 4.5rem;
+        font-size: 7.5rem;
+        span {
+          font-size: 2rem;
+        }
+      }
+      &__subtitle {
+        margin-bottom: 5rem;
+        font-size: 2.5rem;
+      }
+      &__message {
+        margin-top: 6rem;
+        font-size: 2.5rem;
+        .img {
+          width: 20rem;
+          height: 3rem;
+          margin: 0 2rem 0 0;
+        }
+        h4 {
+          line-height: 3rem;
+        }
+      }
+      &__text {
+        line-height: 3rem;
+        margin-top: 6rem;
+      }
+      img {
+        height: 40rem;
+        width: auto;
+      }
+    }
+  }
   /* for PC */
   .wrapper {
     margin: 0 auto;

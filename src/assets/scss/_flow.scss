@@ -1,32 +1,53 @@
 #flow {
   position: relative;
-  .article{
-    &__subtitle{
+  margin: 0 3rem;
+  .article {
+    &__subtitle {
       padding: 1rem;
       width: fit-content;
       margin: 0 auto;
+      background-color: rgba(30, 30, 30, 0.5);
+        backdrop-filter: blur(12px);
+
+    }
+    &__title {
+      &::after{
+        display: none;
+      }
     }
   }
   .lineBlock {
-    width: 90%;
-    margin: auto;
+    width: 100%;
     box-sizing: content-box;
     position: relative;
     .section {
       margin: 6rem 0;
       img {
         padding: 1rem;
-        background-color: #000;
+        background-color: rgba(30, 30, 30, 0.5);
+        backdrop-filter: blur(12px);
+        display: block;
+        margin: 0 0 0 auto;
       }
       &__text {
         display: block;
-        width: 100%;
-        margin: 3rem 0 0 0 ;
+        width: 80%;
+        margin: 3rem 0 0 auto;
         text-align: center;
         padding: 1rem;
-        background-color: #000;
-        h4{
+        background-color: rgba(30, 30, 30, 0.5);
+        backdrop-filter: blur(12px);
+        line-height: 2.5rem;
+        h4 {
           margin-top: 0;
+        }
+      }
+      &:nth-of-type(2n) {
+        img {
+          margin: 0 auto 0 0;
+        }
+        .section__text {
+          margin: 3rem auto 0 0;
         }
       }
     }
@@ -41,4 +62,30 @@
     display: block;
     background-color: #ffffff;
   }
+}
+
+@media screen and (min-width: 768px) {
+#flow {
+  #border {
+    top: 15rem;
+  }
+  .lineBlock {
+    .section {
+      margin: 6rem 0;
+      img {
+        width: 40%;
+        height: auto;
+      }
+      &__text {
+        font-size: 2rem;
+        width: 60%;
+        padding: 5rem;
+        line-height: 4rem;
+        h4 {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
 }

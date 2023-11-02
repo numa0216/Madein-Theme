@@ -1,28 +1,65 @@
 <?php get_header(); ?>
-<div class="wrapper">
-  <h1 class="wrapper__title"><span>施工事例</span></h1>
-  <p class="wrapper__subtitle">Works</p>
-  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-      <div class="card">
-        <a href="<?php the_permalink(); ?>">
-          <div>
-            <img class="card__img-dummy" src="<?php echo get_template_directory_uri(); ?>/assets/img/dammy.png" alt="">
-            <h2 class="card__title"><?php the_title(); ?></h2>
-          </div>
-        </a>
-      </div>
-  <?php endwhile;
-    the_posts_pagination(
-      array(
-        'mid_size' => 2,
-        'prev_text' => '次へ',
-        'next_text' => '前へ',
-      )
-    );
-  endif;
-  wp_reset_query(); ?>
 
+<div id="welcome" class="welcome">
+    <a href="https://madein.works<?php echo esc_url(home_url('/')) ?>">
+        <img id="mainLogo" src="../../../wp-content/uploads/2023/06/logo.svg" alt="メインロゴ">
+    </a>
+</div>
+<div class="top">
+    <div class="works">
+        <a href="/works">
+            <div class="random">
+                <span class="bubble">
+                    <span class="text">Ocean</span>
+                    <span class="bg"></span>
+                </span>
+                <span class="bubble">
+                    <span class="text">Organic</span>
+                    <span class="bg"></span>
+                </span>
+                <span class="bubble">
+                    <span class="text">Aroma</span>
+                    <span class="bg"></span>
+                </span>
+                <span class="bubble">
+                    <span class="text">Jazz</span>
+                    <span class="bg"></span>
+                </span>
+                <span class="bubble">
+                    <span class="text">Sun</span>
+                    <span class="bg"></span>
+                </span>
+                <span class="bubble">
+                    <span class="text">Relax</span>
+                    <span class="bg"></span>
+                </span>
+                <span class="bubble">
+                    <span class="text">Coffee</span>
+                    <span class="bg"></span>
+                </span>
+                <span class="bubble">
+                    <span class="text">Moon</span>
+                    <span class="bg"></span>
+                </span>
+                <span class="bubble">
+                    <span class="text">Retro</span>
+                    <span class="bg"></span>
+                </span>
+            </div>
+            <p class="works__text">Works</p>
+        </a>
+    </div>
+    <div class="yaji">
+        <img src="<?php echo get_template_directory_uri() . '/assets/img/arrow.svg'; ?>" alt="">
+    </div>
+    <div class="company">
+        <a href="/company">
+            <img class="company__img" src="<?php echo get_template_directory_uri() . '/assets/img/symbol-white.svg'; ?>" alt="">
+            <img class="company__logo" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo-white.svg'); ?>" alt="logo">
+        </a>
+    </div>
+    <!-- <span class="blur"></span>
+    <span class="blur"></span> -->
 </div>
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -86,6 +86,9 @@
       padding: 2rem 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      .title{
+        padding-top: 2rem;
+      }
     }
     .menu {
       &__list {
@@ -100,6 +103,9 @@
       &__sns {
         max-width: 25rem;
       }
+    }
+    .front{
+      padding: 0 20% 0;
     }
   }
 }

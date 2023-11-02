@@ -162,3 +162,31 @@ header {
     backdrop-filter: blur(12px);
   }
 }
+
+@media screen and (min-width: 768px) {
+  header {
+    height: 10rem;
+    a {
+      img {
+        height: 5rem;
+        width: 25rem;
+      }
+    }
+    .bg {
+      height: 10rem;
+    }
+    .mainMenu {
+      &__block {
+        top: 10rem;
+        li {
+          width: 40%;
+          margin-left: auto;
+          margin-right: 10rem;
+          a{
+            font-size: 7rem;
+          }
+        }
+      }
+    }
+  }
+}

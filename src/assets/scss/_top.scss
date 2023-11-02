@@ -8,6 +8,7 @@
   gap: 2rem;
   position: relative;
   padding: 0 0 8rem 0;
+  margin: 0 auto;
   .works,
   .company {
     place-items: center;
@@ -115,6 +116,10 @@
   .yaji {
     width: 7rem;
     height: 7rem;
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
 
   .blur {
@@ -142,6 +147,7 @@
   .top {
     grid-template-columns: 45% 1fr 45%;
     max-width: 100%;
+    grid-template-rows: auto;
 
     .works,
     .company {
@@ -157,31 +163,67 @@
         }
       }
       .random {
-        position: relative;
-        height: 15rem;
-        width: 100%;
+        height: 30rem;
         .bubble {
-          display: block;
-          position: absolute;
-          width: 5rem;
-          height: 5rem;
-          border-radius: 50%;
-          background-color: #ffffff;
+          height: 10rem;
+          width: 10rem;
+          font-size: 2rem;
           &:nth-child(1) {
-            left: 55%;
-            top: 0;
+            left: 60%;
+            top: -15%;
           }
           &:nth-child(2) {
-            left: 30%;
-            top: 0;
+            left: 20%;
+            top: -3%;
+            scale: 1.2;
+          }
+          &:nth-child(3) {
+            left: 52%;
+            top: 12%;
+            scale: 0.6;
+          }
+          &:nth-child(4) {
+            left: 80%;
+            top: 15%;
+            scale: 0.9;
+          }
+          &:nth-child(5) {
+            left: -5%;
+            top: 25%;
+            scale: 0.8;
+          }
+          &:nth-child(6) {
+            left: 70%;
+            top: 50%;
+            scale: 1.2;
+          }
+          &:nth-child(7) {
+            left: 32%;
+            top: 36%;
+            scale: 1;
+          }
+          &:nth-child(8) {
+            left: 2%;
+            top: 61%;
+            scale: 0.8;
+          }
+          &:nth-child(9) {
+            left: 34%;
+            top: 75%;
+            scale: 1;
           }
         }
       }
       &__text {
-        margin: 0;
         font-size: 5rem;
-        text-align: center;
         padding: 2rem 0 0;
+      }
+    }
+    .yaji {
+      width: 15rem;
+      height: 15rem;
+      img {
+        transform: rotate(-90deg);
       }
     }
   }

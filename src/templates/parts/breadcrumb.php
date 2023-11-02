@@ -1,5 +1,5 @@
 <?php
-if (is_front_page()) :
+if (is_home() || is_front_page()) :
     return;
 else : ?>
     <nav class="nav">

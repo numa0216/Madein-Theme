@@ -9,7 +9,7 @@
                         <a class="box" href="<?php the_permalink(); ?>">
                             <p class="text">
                                 <span class="text__time"><?php echo esc_html(get_the_date()); ?></span>
-                                <span class="text__content">【<?php echo esc_html($term[0]->name); ?>】</span>
+                                <span class="text__content"><?php echo esc_html($term[0]->name); ?></span>
                                 <span class="text__title"><?php the_title(); ?></span>
                             </p>
                         </a>
