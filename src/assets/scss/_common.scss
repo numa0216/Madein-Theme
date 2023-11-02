@@ -1,6 +1,16 @@
+@font-face {
+  font-family: "Mona Sans";
+  src: url("../font/Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../font/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
 html {
-  font-family: "Butler", sans-serif, "Noto Serif JP", serif;
+  font-family: "Mona Sans", "Butler", sans-serif, "Noto Serif JP", serif;
   font-size: 62.5%;
+  font-weight: 900;
+  font-stretch: 90%;
   .en {
     font-family: "Cormorant Infant", "Noto Serif JP", serif;
   }
@@ -19,13 +29,14 @@ body {
   position: relative;
   height: 100%;
   min-height: 100vh;
+  min-height: 100dvh;
   width: 100%;
   width: 100vw;
   padding-top: 8rem;
-  background: url(../img/madein-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #000000;
+  background-image: url(../img/madein-bg.jpg);
   color: #ffffff;
   font-size: 1.4rem;
 }
@@ -90,34 +101,6 @@ body {
     img {
       width: 80%;
     }
-    .lineBlock {
-      width: 90%;
-      margin: auto;
-      box-sizing: content-box;
-      position: relative;
-      &::before {
-        border-left: 0.1rem solid #ffffff;
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0.1rem;
-      }
-    }
-    .section {
-      // text-align: left;
-      padding: 0 0 0 4rem;
-      img {
-        display: block;
-        margin-left: auto;
-      }
-      &__text {
-        display: block;
-        width: 100%;
-        margin-left: auto;
-        text-align: left;
-      }
-    }
   }
 }
 
@@ -144,7 +127,7 @@ body {
 
 .container {
   position: relative;
-  margin: 4rem 2rem 4rem;
+  margin: 6rem 2rem 4rem;
   padding: 2rem 0;
   border-radius: 1rem;
   background-color: #e2e2e2;

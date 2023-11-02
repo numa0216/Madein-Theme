@@ -1,14 +1,28 @@
 // normalize
-@import '/node_modules/modern-normalize/modern-normalize.css';
+@import "/node_modules/modern-normalize/modern-normalize.css";
 
-@import 'common';
-@import 'top';
-@import 'header';
-@import 'breadcrumb';
-@import 'navigation';
-@import 'sidebar';
-@import 'footer';
-@import 'contact';
-@import 'archive';
-@import 'flow';
-@import 'single-works';
+@import "common";
+@import "top";
+@import "header";
+@import "breadcrumb";
+@import "navigation";
+@import "sidebar";
+@import "footer";
+@import "contact";
+@import "archive";
+@import "flow";
+@import "single-works";
+
+// body {
+//   background-color: #f3f3d9;
+// }
+// header {
+//   background-color: #d5d5bf;
+// }
+// .footer {
+//   background-color: #d5d5bf;
+//   .front{
+//   background-color: #d5d5bf;
+
+//   }
+// }

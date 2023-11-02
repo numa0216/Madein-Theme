@@ -2,12 +2,12 @@
   min-height: calc(100vh - 21rem);
   min-height: calc(100dvh - 21rem);
   max-width: 40rem;
-  padding: 1rem 0;
   display: grid;
+  grid-template-rows: auto 7rem auto;
   place-items: center;
-  gap: 1rem;
+  gap: 2rem;
   position: relative;
-  margin: 0 auto;
+  padding: 0 0 8rem 0;
   .works,
   .company {
     place-items: center;
@@ -21,42 +21,120 @@
       color: #ffffff;
       gap: 1rem;
       img {
-        padding: 0 5rem;
-      }
-    }
-    .random {
-      position: relative;
-      height: 15rem;
-      width: 100%;
-      .bubble {
-        display: block;
-        position: absolute;
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
-        background-color: #ffffff;
-        font-size: 5rem;
-        &:nth-child(1) {
-          left: 55%;
-          top: 0;
-        }
-        &:nth-child(2) {
-          left: 30%;
-          top: 0;
-        }
+        padding: 0 5rem 2rem 5rem;
       }
     }
     &__text {
-      margin: 0;
       font-size: 3rem;
+      margin: 0;
       text-align: center;
-      padding: 2rem 0 0;
+      padding: 1rem 0 0;
+    }
+  }
+
+  .random {
+    font-size: 1.2rem;
+    position: relative;
+    height: 20rem;
+    width: 100%;
+    .bubble {
+      width: 5rem;
+      height: 5rem;
+      position: absolute;
+      border-radius: 50%;
+      display: block;
+      color: #000;
+      text-align: center;
+      line-height: 5rem;
+      .bg {
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: #ffffff;
+        filter: blur(2px);
+      }
+      .text {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+      }
+
+      &:nth-child(1) {
+        left: 55%;
+        top: 0;
+      }
+      &:nth-child(2) {
+        left: 30%;
+        top: 12%;
+        scale: 1.2;
+      }
+      &:nth-child(3) {
+        left: 46%;
+        top: 21%;
+        scale: 0.6;
+      }
+      &:nth-child(4) {
+        left: 64%;
+        top: 25%;
+        scale: 0.9;
+      }
+      &:nth-child(5) {
+        left: 18%;
+        top: 34%;
+        scale: 0.8;
+      }
+      &:nth-child(6) {
+        left: 56%;
+        top: 52%;
+        scale: 1.2;
+      }
+      &:nth-child(7) {
+        left: 36%;
+        top: 43%;
+        scale: 1;
+      }
+      &:nth-child(8) {
+        left: 22%;
+        top: 57%;
+        scale: 0.8;
+      }
+      &:nth-child(9) {
+        left: 40%;
+        top: 70%;
+        scale: 1;
+      }
     }
   }
 
   .yaji {
     width: 7rem;
     height: 7rem;
+  }
+
+  .blur {
+    position: absolute;
+    display: block;
+    background-color: #ffffff;
+    &:nth-of-type(1) {
+      top: 0;
+      left: 0;
+      width: 10rem;
+      height: 10rem;
+      filter: blur(50px);
+    }
+    &:nth-of-type(2) {
+      top: 50%;
+      right: 0;
+      width: 10rem;
+      height: 10rem;
+      filter: blur(50px);
+    }
   }
 }
 
@@ -65,46 +143,46 @@
     grid-template-columns: 45% 1fr 45%;
     max-width: 100%;
 
-  .works,
-  .company {
-    a {
+    .works,
+    .company {
+      a {
         grid-template-rows: 80% auto;
         width: auto;
         gap: 3rem;
-      img {
-        padding: 0;
-        height: 100%;
-        display: block;
+        img {
+          padding: 0;
+          height: 100%;
+          width: 100%;
+          display: block;
+        }
       }
-    }
-    .random {
-      position: relative;
-      height: 15rem;
-      width: 100%;
-      .bubble {
-        display: block;
-        position: absolute;
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
-        background-color: #ffffff;
+      .random {
+        position: relative;
+        height: 15rem;
+        width: 100%;
+        .bubble {
+          display: block;
+          position: absolute;
+          width: 5rem;
+          height: 5rem;
+          border-radius: 50%;
+          background-color: #ffffff;
+          &:nth-child(1) {
+            left: 55%;
+            top: 0;
+          }
+          &:nth-child(2) {
+            left: 30%;
+            top: 0;
+          }
+        }
+      }
+      &__text {
+        margin: 0;
         font-size: 5rem;
-        &:nth-child(1) {
-          left: 55%;
-          top: 0;
-        }
-        &:nth-child(2) {
-          left: 30%;
-          top: 0;
-        }
+        text-align: center;
+        padding: 2rem 0 0;
       }
     }
-    &__text {
-      margin: 0;
-      font-size: 3rem;
-      text-align: center;
-      padding: 2rem 0 0;
-    }
-  }
   }
 }

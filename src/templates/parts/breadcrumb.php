@@ -10,6 +10,8 @@ else : ?>
                 $post_type = get_query_var('post_type');
                 if ($post_type === "works") : ?>
                     <a href="<?php echo esc_url(home_url('/works/')); ?>">Works</a>
+                <?php elseif ($post_type === "news") : ?>
+                    <a href="<?php echo esc_url(home_url('/news/')); ?>">News</a>
                 <?php endif; ?>
                 <span>»</span>
                 <!-- the_category (' • '); -->
@@ -20,6 +22,8 @@ else : ?>
                 <?php the_title(); ?>
             <?php elseif (is_post_type_archive('works')) : ?>
                 Works
+            <?php elseif (is_post_type_archive('news')) : ?>
+                News
             <?php endif; ?>
         </div>
     </nav>

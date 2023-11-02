@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -22,19 +22,18 @@
             <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo-white.svg'); ?>" alt="logo">
         </a>
         <div id="modalMenu" class="mainMenu">
-            <button type="button" class="btn" @click="show = !show">
+            <button type="button" class="btn" @click="show = !show; show === true ? gsapOn() : gsapOff();">
                 <span class="btn-line" v-bind:class="{'open': show, '': !show}"></span>
             </button>
-            <transition name="modal">
-                <div id="menuBtnJs" class="mainMenu__block" v-show="show" style="display: none">
+                <div id="menuBtnJs" class="mainMenu__block">
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'main-menu'
                     ));
                     ?>
                 </div>
-            </transition>
         </div>
+        <span class="bg"></span>
     </header>
 
     <?php get_template_part('templates/parts/breadcrumb'); ?>

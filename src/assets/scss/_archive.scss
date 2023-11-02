@@ -45,6 +45,49 @@
         }
       }
     }
+    .news {
+      .post {
+        border-bottom: 0.1rem solid #707070;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:first-child {
+          border-top: 0.1rem solid #707070;
+        }
+        .box {
+          padding: 1.5rem 1.5rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .text {
+            color: #303030;
+            font-size: 1.4rem;
+            width: 80%;
+            display: inline-block;
+            &__title {
+              display: block;
+              margin: 1.5rem 0 0 1rem;
+            }
+          }
+          &__open {
+            position: relative;
+            width: 2rem;
+            height: 2rem;
+            img {
+              display: block;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 1.5rem;
+              height: 1.5rem;
+            }
+          }
+        }
+      }
+    }
   }
 }
 @media screen and (min-width: 768px) {
@@ -58,6 +101,25 @@
         gap: 2rem;
         .card {
           margin: 0;
+        }
+      }
+
+      .news {
+        margin: 5rem 0;
+        .post {
+          .box {
+            padding: 2rem 10rem;
+            .text {
+              width: 100%;
+              display: grid;
+              grid-template-columns: 9rem 15rem 1fr;
+              gap: 5rem;
+              &__title {
+                display: inline-block;
+                margin: 0;
+              }
+            }
+          }
         }
       }
     }

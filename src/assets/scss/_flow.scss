@@ -1,6 +1,44 @@
-#border {
-  position: absolute;
-  width: .5rem;
-  display: block;
-  background-color: #ffffff;
+#flow {
+  position: relative;
+  .article{
+    &__subtitle{
+      padding: 1rem;
+      width: fit-content;
+      margin: 0 auto;
+    }
+  }
+  .lineBlock {
+    width: 90%;
+    margin: auto;
+    box-sizing: content-box;
+    position: relative;
+    .section {
+      margin: 6rem 0;
+      img {
+        padding: 1rem;
+        background-color: #000;
+      }
+      &__text {
+        display: block;
+        width: 100%;
+        margin: 3rem 0 0 0 ;
+        text-align: center;
+        padding: 1rem;
+        background-color: #000;
+        h4{
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  #border {
+    z-index: -1;
+    position: absolute;
+    top: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.5rem;
+    display: block;
+    background-color: #ffffff;
+  }
 }
