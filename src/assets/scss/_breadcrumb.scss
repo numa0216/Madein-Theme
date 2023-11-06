@@ -14,7 +14,7 @@
   /* for PC */
 .nav {
   &__wrap {
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto;
     padding-left: 10rem;
   }

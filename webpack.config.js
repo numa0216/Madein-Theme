@@ -79,7 +79,7 @@ module.exports = {
     minimizer: [
       new TerserPlugin(),
       // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
-      // `...`, 　ここを追加することでjsのminifyの設定を維持しつつcssをminifyできる（スプレッド演算子のイメージ）。
+      // `...`,  ここを追加することでjsのminifyの設定を維持しつつcssをminifyできる（スプレッド演算子のイメージ）。
       new CssMinimizerPlugin(),
     ],
   },
@@ -107,7 +107,7 @@ module.exports = {
         {
           from: "src",
           globOptions: {
-            ignore: ["**/_*.*","**/*.js", "**/*.scss"],
+            ignore: ["**/_*.*","**/js/*.js", "**/*.scss"],
           },
         },
       ],

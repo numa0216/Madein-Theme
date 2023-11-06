@@ -10,12 +10,39 @@ add_action('after_setup_theme', function () {
 
 add_action('wp_enqueue_scripts',   function () {
     wp_enqueue_script(
-        'custom_script',
+        'main_script',
         get_template_directory_uri() . '/assets/js/main.js',
         array(),
         'false',
         'false'
     );
+
+    if (is_front_page() || is_home()) {
+        wp_enqueue_script(
+            'top_script',
+            get_template_directory_uri() . '/assets/js/top.js',
+            array(),
+            'false',
+            'false'
+        );
+    } elseif (is_page('flow')) {
+        wp_enqueue_script(
+            'flow_script',
+            get_template_directory_uri() . '/assets/js/flow.js',
+            array(),
+            'false',
+            'false'
+        );
+    } elseif (is_archive() || is_singular()) {
+        wp_enqueue_script(
+            'archive_script',
+            get_template_directory_uri() . '/assets/js/archive.js',
+            array(),
+            'false',
+            'false'
+        );
+    }
+
     wp_enqueue_style(
         'main',
         get_template_directory_uri() . '/style.css',
@@ -26,4 +53,3 @@ add_action('wp_enqueue_scripts',   function () {
     wp_enqueue_script('scrollTrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js', array(), '3.11.5', false);
     wp_enqueue_script('split-type', 'https://unpkg.com/split-type', array(), '0.3.4', false);
 });
-
