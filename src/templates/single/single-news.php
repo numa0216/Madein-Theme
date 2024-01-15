@@ -10,6 +10,7 @@
                 </div>
                 <h1 class="single__title"><span><?php the_title(); ?></span></h1>
                 <div class="single__content"><?php the_content(); ?></div>
+                <span class="single__time"><?php echo esc_html(get_the_date()); ?></span>
         <?php endwhile;
         endif;
         ?>

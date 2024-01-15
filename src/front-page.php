@@ -10,7 +10,8 @@
         <a href="/works">
             <div class="random">
                 <span class="bubble">
-                    <span class="text">Ocean</span>
+                    <span class="text"><?php echo get_option('toppage_url_1_text'); ?></span>
+                    <img src="<?php echo get_option('toppage_url_1_img'); ?>" alt="">
                     <span class="bg"></span>
                 </span>
                 <span class="bubble">

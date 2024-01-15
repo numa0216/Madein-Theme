@@ -24,8 +24,7 @@
                 <img src="<?php echo get_template_directory_uri() . '/assets/img/flow-03.webp'; ?>" alt="flow-03">
                 <div class="section__text">
                     <h4>3<span>『</span>共有<span>』</span></h4>
-                    <p>・弊社ではBIMでの設計を採用しており、プラン作成段階から施工時まで</p>
-                    <p>3Dモデルを活用し、常にリアルな3Dパースを提供しイメージを共有させていただきます。</p>
+                    <p>・弊社ではBIMでの設計を採用しており、プラン作成段階から施工時まで3Dモデルを活用し、常にリアルな3Dパースを提供しイメージを共有させていただきます。</p>
                 </div>
             </section>
             <section class="section left">
@@ -37,10 +36,11 @@
                 </div>
             </section>
             <section class="section right" ref="secLast">
-                <img src="<?php echo get_template_directory_uri() . '/assets/img/flow-04.webp'; ?>" alt="flow-05">
+                <img src="<?php echo get_template_directory_uri() . '/assets/img/flow-05.webp'; ?>" alt="flow-05">
                 <div class="section__text">
                     <h4>5<span>『</span>家族<span>』</span></h4>
-                    <p>・お引き渡しをしたら終了ではなく、アフターメンテナンス等は当然ご対応させていただくと共に、今後とも末永くお付き合いさせていただけましたら幸いです。私たちは建物の『竣工』までをお手伝いさせていただきますが、建物を大切にし『完成』させるのはあなた様です。私たちはメンテナンスを通し、あなた様の暮らしの完成までをお手伝させていただきたいのです。</p>
+                    <p>・お引き渡しをしたら終了ではなく、アフターメンテナンス等は当然ご対応させていただくと共に、今後とも末永くお付き合いさせていただけましたら幸いです。</p>
+                    <p>私たちは建物の『竣工』までをお手伝いさせていただきますが、建物を大切にし『完成』させるのはあなた様です。私たちはメンテナンスを通し、あなた様の暮らしの完成までをお手伝させていただきたいのです。</p>
                 </div>
             </section>
         </div>

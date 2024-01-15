@@ -1,6 +1,6 @@
 </main>
 <footer class="footer">
-  <div class="footer__main" <?php if(is_home() || is_front_page()) echo 'style="display: none;"';?>>
+  <div class="footer__main" <?php if (is_home() || is_front_page()) echo 'style="display: none;"'; ?>>
     <div class="title">
       <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/logo-white.svg'); ?>" alt="logo">
       <div class="address">
@@ -36,20 +36,19 @@
   </div>
 
   <?php /* フロントページ用のフッター */ ?>
-  <div class="front" <?php if(!is_home() && !is_front_page()) echo 'style="display: none;"';?> >
+  <div class="front" <?php if (!is_home() && !is_front_page()) echo 'style="display: none;"'; ?>>
     <div class="icon">
-      <a href="">
+      <a href="<?php echo get_option('sns_twitter_url'); ?>" target="_blank">
         <img src="<?php echo get_template_directory_uri() . '/assets/img/Twitter-white.svg'; ?>" alt="">
       </a>
     </div>
     <div class="icon">
-      <a href="">
+      <a href="<?php echo get_option('sns_instagram_url'); ?>" target="_blank">
         <img src="<?php echo get_template_directory_uri() . '/assets/img/Instagram-white.svg'; ?>" alt="">
-      </a>
       </a>
     </div>
     <div class="icon">
-      <a href="">
+      <a href="<?php echo get_option('sns_youtube_url'); ?>" target="_blank">
         <img src="<?php echo get_template_directory_uri() . '/assets/img/youtube-white.svg'; ?>" alt="">
       </a>
     </div>
@@ -68,7 +67,7 @@
   <?php /* コピーライト */ ?>
   <?php $blog_info = get_bloginfo('name');
   if (!empty($blog_info)) : ?>
-    <span class="copyright" <?php if(is_home() || is_front_page()) echo 'style="display: none;"';?>>
+    <span class="copyright" <?php if (is_home() || is_front_page()) echo 'style="display: none;"'; ?>>
       Copyright © <?php echo date("Y") ?> <a class="site-name" href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php echo esc_html($blog_info); ?></a> All Rights Reserved.
     </span>
   <?php endif; ?>

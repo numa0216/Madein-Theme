@@ -11,7 +11,7 @@
                 <?php if (has_post_thumbnail()) : ?>
                   <?php the_post_thumbnail('large'); ?>
                 <?php else : ?>
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/dammy.png" alt="デフォルト画像" />
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/no-image.svg" alt="デフォルト画像" />
                 <?php endif; ?>
                 <h2 class="card__title"><?php the_title(); ?></h2>
               </div>
@@ -25,7 +25,7 @@
     <?php
     the_posts_pagination(
       array(
-        'mid_size' => 2,
+        'mid_size' => 5,
         'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
         'prev_text' => '<',
         'next_text' => '>',

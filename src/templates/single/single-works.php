@@ -7,7 +7,7 @@
                     <?php if (has_post_thumbnail()) : ?>
                         <?php the_post_thumbnail('large') ?>
                     <?php else : ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/dammy.png" alt="デフォルト画像" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/no-image.svg" alt="デフォルト画像" />
                     <?php endif; ?>
                 </div>
                 <h1 class="single__title"><span><?php the_title(); ?></span></h1>
