@@ -171,7 +171,7 @@ class AddAdminMenuSNS extends AddAdminMenu
         $this->settings_field_sns('sns_instagram_url', 'instagram');
         $this->settings_field_sns('sns_twitter_url', 'twitter (X)');
         for ($i = 1; $i < 10; $i++) {
-            $this->settings_field_toppage("toppage_url_{$i}_img", "toppage_{$i}_img", "toppage_url_{$i}_text", "toppage_{$i}_text");
+            $this->settings_field_toppage("toppage_url_{$i}_img", "画像{$i}", "toppage_url_{$i}_text", "テキスト{$i}");
         }
     }
 

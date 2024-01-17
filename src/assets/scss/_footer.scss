@@ -38,9 +38,6 @@
         .icon {
           width: 3rem;
         }
-        // .icon{
-
-        // }
       }
     }
   }
@@ -64,7 +61,7 @@
         height: 100%;
         img {
           display: block;
-          width: 2.5rem;
+          width: 1.5rem;
           height: 100%;
           margin: 0 auto;
         }
@@ -104,8 +101,15 @@
         max-width: 25rem;
       }
     }
-    .front{
+    .front {
       padding: 0 20% 0;
-    }
+        .icon {
+          a {
+            img {
+              width: 2.5rem;
+            }
+          }
+        }
+      }
   }
 }

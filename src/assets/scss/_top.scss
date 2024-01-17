@@ -47,6 +47,14 @@
       color: #000;
       text-align: center;
       line-height: 5rem;
+      .bgImg {
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        display: block;
+        border-radius: 50%;
+        filter: blur(1px);
+      }
       .bg {
         border-radius: 50%;
         top: 0;
@@ -57,6 +65,7 @@
         display: block;
         background-color: #ffffff;
         filter: blur(2px);
+        overflow: hidden;
       }
       .text {
         top: 50%;
