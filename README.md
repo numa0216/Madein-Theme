@@ -1,2 +1,2 @@
-# Wordpress-Theme
-Wordpress-BaseTheme
+# Madein-Theme
+Madein-Theme
